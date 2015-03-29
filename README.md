@@ -15,6 +15,31 @@ Autodesk's Spark API provides an agnostic solution toolset for generating printe
 
 
 ##Real-time charting of data from every sensor within the Status object
+###Example Status JSON
+    {
+        "state": "ready",
+        "tools": {
+            "bed": {
+                "type": "bed"
+            },
+            "extruder": {
+                "type": "extruder"
+            }
+        },
+        "sensors": {
+            "bed": {
+                "type": "temperature",
+                "description": "bed temperature sensor",
+                "temperature": 0
+            },
+            "extruder": {
+                "type": "temperature",
+                "description": "extruder temperature sensor",
+                "temperature": 24
+            }
+        },
+        "materials": {}
+    }
 
 ##Provide interface to jog each tool on printer
 
