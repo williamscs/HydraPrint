@@ -27,3 +27,11 @@ body {
   color: #000;
   padding: 0.2em 0;
 }
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+canvas {
+   display: inline;
+}
