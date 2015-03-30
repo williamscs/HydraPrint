@@ -4,6 +4,12 @@ body {
   color: #333;
 }
 
+div.inline { 
+  float:left;
+  margin-right: 0.75em
+}
+.clearBoth { clear:both; }
+
 .header {
   margin-bottom: 0.75em;
 }
@@ -41,8 +47,8 @@ body {
   padding: 0.2em 0;
 }
 #main-content {
-   width: 100%;
-   text-align:center;
+   width: 60%;
+   margin: 0 auto;
 }
 
 canvas {
