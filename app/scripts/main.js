@@ -1,13 +1,15 @@
 
 var chartTool = {
 	options: {
-		animation: false
+		//animation: false
+		animationSteps: 15
 	},
 	currHSL: 220,
 	data: {
 		labels: [],
 		datasets: []
 	},
+	chart: undefined,
 	generateDataset: function(label) {
 		var newObj = {};
 		var rgbString = this.hslToRgb(this.currHSL / 360, 0.8, 0.7);
@@ -20,23 +22,28 @@ var chartTool = {
 		newObj.pointHighlightStroke = 'rgba(' + rgbString + ', 1)';
 		newObj.pointStrokeColor = '#fff';
 		newObj.pointHighlightFill = '#fff';
-		newObj.data = [];
+		newObj.points = [];
 
 		this.currHSL = this.genHSL(this.currHSL);
 		return newObj;
 	},
 	checkDataExists: function(prop) {
-		for (var i = 0; i < this.data.datasets.length; i++) {
-			if (prop === this.data.datasets[i].label){
+		for (var i = 0; i < this.chart.datasets.length; i++) {
+			if (prop === this.chart.datasets[i].label){
 				return i;
 			}
 		}
 		return -1;
 	},
 	populateData: function(data) {
+		if (this.chart === undefined) {
+			this.createDisplay();
+			this.chart.datasets = [];
+		} 
 		//add current time to labels
 		var date = new Date();
-		this.data.labels.push(date.toTimeString());
+		var label = date.toLocaleTimeString();
+		var temps = new Array(Object.keys(data.sensors).length);
 
 		jQuery('#state').html(data.state);
 
@@ -47,28 +54,36 @@ var chartTool = {
 			var pos = this.checkDataExists(properKey);
 			if (pos === -1) {
 				var obj = this.generateDataset(properKey);
-				this.data.datasets.push(obj);
-				pos = this.data.datasets.length - 1;
+				this.chart.datasets.push(obj);
+				pos = this.chart.datasets.length - 1;
 			}
 
 			var temperature = data.sensors[key].temperature;
 			if (temperature !== undefined) {
-				this.data.datasets[pos].data.push(temperature);
+				temps[pos] = temperature;
 			}
 			tools += properKey + ', ';
 		}
 
+		this.chart.addData(temps, label);
 		jQuery('#tools').html(tools.slice(0,-2));
 	},
-	updateDisplay: function() { 
+	createDisplay: function(){
 		// Get context with jQuery - using jQuery's .get() method.
-		var ctx = $('#myChart').get(0).getContext('2d');
+		var ctx = jQuery('#myChart').get(0).getContext('2d');
 		// This will get the first returned node in the jQuery collection.
-		var myNewChart = new Chart(ctx);
-		myNewChart.Line(this.data, this.options);
+		var genericChart = new Chart(ctx);
+		var obj = {
+			labels: [], 
+			datasets: [this.generateDataset('')]
+		};
+		this.chart = genericChart.Line(obj, this.options);
+	},
+	updateDisplay: function() {
+		this.chart.update();
 	},
 	genHSL: function(currentHSL) {
-		//137.5
+		//137.5 is getting next golden ratio value
 		return (currentHSL + 137.5) % 360;
 	},
 	/**
@@ -146,72 +161,27 @@ var sampleJson = {
 			'description': 'bed temperature sensor',
 			'temperature': 40
 		},
-		'extruder': {
+		'extruder1': {
 			'type': 'temperature',
 			'description': 'extruder temperature sensor',
 			'temperature': 24
-		}
-	},
-	'materials': {}
-};
-var sampleJson2 = {
-	'state': 'ready',
-	'tools': {
-		'bed': {
-			'type': 'bed'
 		},
-		'extruder': {
-			'type': 'extruder'
-		}
-	},
-	'sensors': {
-		'bed': {
-			'type': 'temperature',
-			'description': 'bed temperature sensor',
-			'temperature': 30
-		},
-		'extruder': {
+		'extruder2': {
 			'type': 'temperature',
 			'description': 'extruder temperature sensor',
-			'temperature': 60
+			'temperature': 30
 		}
 	},
 	'materials': {}
 };
 
-var sampleJson3 = {
-	'state': 'ready',
-	'tools': {
-		'bed': {
-			'type': 'bed'
-		},
-		'extruder': {
-			'type': 'extruder'
-		}
-	},
-	'sensors': {
-		'bed': {
-			'type': 'temperature',
-			'description': 'bed temperature sensor',
-			'temperature': 60
-		},
-		'extruder': {
-			'type': 'temperature',
-			'description': 'extruder temperature sensor',
-			'temperature': 90
-		}
-	},
-	'materials': {}
-};
 
 chartTool.populateData(sampleJson);
 chartTool.updateDisplay();
-setTimeout(function () {
-    chartTool.populateData(sampleJson2);
-	chartTool.updateDisplay();
+setInterval(function () {
+	sampleJson.sensors.extruder2.temperature = Math.random() * (40-20) + 20;
+	sampleJson.sensors.extruder1.temperature = Math.random() * (40-20) + 20;
+	sampleJson.sensors.bed.temperature = Math.random() * (40-20) + 20;
+    chartTool.populateData(sampleJson);
 }, 5000);
 
-setTimeout(function () {
-    chartTool.populateData(sampleJson3);
-	chartTool.updateDisplay();
-}, 10000);
