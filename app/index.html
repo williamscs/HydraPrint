@@ -17,7 +17,6 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
   </head>
   <body>
@@ -38,7 +37,8 @@
       <div class="inline">Tools:</div>
       <div id='tools' class="inline"></div>
       <div class="clearBoth"></div>
-      <canvas id="myChart" width="400" height="400" style='margin: 0 auto'></canvas>
+      <canvas id="myChart" style='margin: 0 auto'></canvas>
+      <div id="legend"></div>
     </div>
 
 
@@ -46,6 +46,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -59,6 +60,7 @@
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/chartTool.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>
