@@ -43,14 +43,10 @@ var sampleJson = {
 	},
 	'materials': {}
 };
+// jshint undef: false
+for (var i = 0; i < 20; i++) {
+	var div = layoutManager.createJobCell('Job', 'Printer', 273637, Math.random() * 100);
+	var jobs = document.getElementById('jobs');
 
-// jshint undef: false 
-chartTool.populateData(sampleJson);
-chartTool.updateDisplay();
-setInterval(function () {
-	sampleJson.sensors.extruder2.temperature = Math.random() * (40-20) + 20;
-	sampleJson.sensors.extruder1.temperature = Math.random() * (40-20) + 20;
-	sampleJson.sensors.bed.temperature = Math.random() * (40-20) + 20;
-    chartTool.populateData(sampleJson);
-}, 5000);
-
+	jobs.appendChild(div);
+}
