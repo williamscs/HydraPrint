@@ -61,6 +61,10 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*'
         ]
+      },
+      react: {
+        files: '<%= config.app %>/scripts/**/*.jsx',
+        tasks: ['react']
       }
     },
 
@@ -335,7 +339,20 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
-    }
+    },
+    react: {
+      jsx: {
+        files: [
+          {
+            expand: true,
+            cwd: 'app/scripts',
+            src: [ '**/*.jsx' ],
+            dest: 'app/scripts',
+            ext: '.js'
+          }
+        ]
+      }
+    },
   });
 
 
@@ -398,4 +415,5 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+  grunt.loadNpmTasks('grunt-react');
 };

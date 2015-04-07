@@ -1,5 +1,6 @@
 {
   "node": true,
+  "asi": true,
   "browser": true,
   "esnext": true,
   "bitwise": true,
@@ -8,10 +9,10 @@
   "eqeqeq": true,
   "immed": true,
   "indent": 2,
+  "lastsemic": true,
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "quotmark": "single",
   "undef": true,
   "unused": true,
   "trailing": true,
@@ -19,6 +20,7 @@
   "jquery": true,
   "globals": {
     "angular": false,
-    "Chart"  : false
+    "Chart"  : false,
+    "React" : false
   }
 }

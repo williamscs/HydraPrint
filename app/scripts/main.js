@@ -44,9 +44,4 @@ var sampleJson = {
 	'materials': {}
 };
 // jshint undef: false
-for (var i = 0; i < 20; i++) {
-	var div = layoutManager.createJobCell('Job', 'Printer', 273637, Math.random() * 100);
-	var jobs = document.getElementById('jobs');
 
-	jobs.appendChild(div);
-}

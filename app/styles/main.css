@@ -23,13 +23,17 @@ div.inline {
 }
 
 .header {
+  font-size: 3em;
   margin-bottom: 0.75em;
+  padding: 0.25em 0;
+  color: white;
+  background-color: rgb(43, 106, 145)
 }
 
 .header > *{
   top: 0;
   left: 0;
-  margin: 0;
+  margin-left: 1em;
 }
 .header > p {
   font-size: 0.8em;
