@@ -16,7 +16,11 @@ div.inline {
   padding: 0.2em 0;
 }
 
-.clearBoth { clear:both; }
+.contentEndText {
+  clear:both;
+  text-align: center;
+  padding-top: 1.5em
+}
 
 .footer{
   clear: both
@@ -84,7 +88,7 @@ div.inline {
 
 .progress { 
   height: 30px;  /* Can be anything */
-  margin-top: 1.7em;
+  margin-top: 2em;
   text-align: left;
   position: relative;
   background: #CCC;
@@ -131,7 +135,7 @@ box-shadow:
 }
 
 .subtext {
-  margin-top: 0.35em;
+  margin-top: 1em;
   font-size: 0.8em;
   display: block;
   font-style: italic;
@@ -141,7 +145,11 @@ box-shadow:
   font-size: 2em;
   font-weight: bold;
   margin-top: 1em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+#jobs {
+  display: table
 }
 
 #legend {
