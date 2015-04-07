@@ -119,8 +119,11 @@ box-shadow:
   );
   z-index: 1;
   background-size: 50px 50px;
-  animation: move 2s linear infinite;
   overflow: hidden;
+}
+
+.animate > .progressBar:after {
+  animation: move 2s linear infinite;
 }
 
 .subtext {
