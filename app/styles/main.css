@@ -35,7 +35,7 @@ body {
   position: relative;
   top: 9px;
   float: left;
-  margin-right: 15px;
+  left: 15px;
 }
 
 .brand-title{
@@ -198,6 +198,11 @@ canvas {
 /*MOBILE STYLES*/
 @media only screen and (max-width : 768px) {
   .brand-logo{
-    left: 15px;
+    left: 25px;
+  }
+  .nav > li {
+    position: relative;
+    display: block;
+    left: 10px;
   }
 }
