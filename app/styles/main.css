@@ -80,9 +80,14 @@ div.inline {
   text-align:center;
 }
 
+.no-padding{
+  padding: 0px;
+}
+
 .job-bg{
   background: whitesmoke;
   border: 10px solid white;
+  padding: 0px;
 }
 
 .new-job {
