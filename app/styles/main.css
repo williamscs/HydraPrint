@@ -69,27 +69,6 @@ div.inline {
   padding-top: 1.5em
 }
 
-.job-cell {
-  background-color: #fff;
-  border: 1px solid #CCC;
-  margin: 1em;
-  width: 240px;
-  height: 11.5em;
-  text-align: center;
-  float: left
-}
-
-.job-cell:hover {
-  background-color: #f0f0f0;
-  cursor: pointer;
-}
-
-.job-cell > img {
-  max-width: 100px;
-  max-height: 100px;
-  vertical-align: middle
-}
-
 .legendColor {
   border-radius:8px;
   border:1px solid #ccc;
@@ -174,9 +153,6 @@ box-shadow:
   margin-bottom: 0.5em;
 }
 
-#jobs {
-  display: table
-}
 
 #legend {
   list-style-type: none;

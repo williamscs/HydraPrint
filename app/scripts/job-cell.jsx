@@ -2,7 +2,7 @@ var JobCell = React.createClass({
 		render: function() {
 			this.props.progress = parseInt(this.props.progress, 10);
 			return (
-				<div className="job-cell">
+				<div className="col-sm-3">
 					<div className="title">{this.props.title}</div>
 					<a href="#">{this.props.printer}</a>
 					<span className="subtext">76hrs 0min 37sec</span>
@@ -24,10 +24,10 @@ var JobContainer = React.createClass({
 								<JobCell title={job.title} printer={job.printer} progress={job.progress} />
 							);
 						});
-		
+
 		return (
 			<div id="jobs">
-				<div className="job-cell">
+				<div className="col-sm-3">
 					<span className="new-job"></span>
 					<img src="/plus.png" alt="MDN" />
 				</div>
