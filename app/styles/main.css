@@ -1,14 +1,12 @@
+
+/* BODY */
 body {
   background: #f5f5f5;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "europa",sans-serif;
   color: #5F5F5F;
 }
 
-div.inline { 
-  float:left;
-  margin-right: 0.75em
-}
-
+/* BROWSER SPECIFIC STYLES */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -16,31 +14,59 @@ div.inline {
   padding: 0.2em 0;
 }
 
-.contentEndText {
-  clear:both;
-  text-align: center;
-  padding-top: 1.5em
+/* NAV STYLES */
+
+.navbar-header{
+  height: 50px;
 }
 
+.navbar-default {
+  background-color: #2d698f;
+  border-color: #2d698f;
+}
+
+.navbar a {
+  color: white;
+}
+
+.brand-logo{
+  width: 100%;
+  max-width: 32px;
+  position: relative;
+  top: 9px;
+  float: left;
+  margin-right: 15px;
+}
+
+.brand-title{
+  font-family: "europa",sans-serif;
+  color: white;
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  font-size: 23px;
+  letter-spacing: 1px;
+  left: 60px;
+}
+
+/* FOOTER STYLES */
 .footer{
   clear: both
 }
 
-.header {
-  font-size: 3em;
-  margin-bottom: 0.75em;
-  padding: 0.25em 0;
-  color: white;
-  background-color: rgb(43, 106, 145)
+
+
+/* JOB STYLES */
+
+div.inline {
+  float:left;
+  margin-right: 0.75em
 }
 
-.header > *{
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-}
-.header > p {
-  font-size: 0.8em;
+.contentEndText {
+  clear:both;
+  text-align: center;
+  padding-top: 1.5em
 }
 
 .job-cell {
@@ -86,7 +112,7 @@ div.inline {
   background-color: none
 }
 
-.progress { 
+.progress {
   height: 30px;  /* Can be anything */
   margin-top: 2em;
   text-align: left;
@@ -104,7 +130,7 @@ div.inline {
   rgb(43,194,83) 37%,
   rgb(84,240,84) 69%
 );
-box-shadow: 
+box-shadow:
   inset 0 2px 9px  rgba(255,255,255,0.3),
   inset 0 -2px 6px rgba(0,0,0,0.4); */
   position: relative;
@@ -116,13 +142,13 @@ box-shadow:
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
   background-image: linear-gradient(
-    -45deg, 
-    rgba(255, 255, 255, .2) 25%, 
-    transparent 25%, 
-    transparent 50%, 
-    rgba(255, 255, 255, .2) 50%, 
-    rgba(255, 255, 255, .2) 75%, 
-    transparent 75%, 
+    -45deg,
+    rgba(255, 255, 255, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .2) 50%,
+    rgba(255, 255, 255, .2) 75%,
+    transparent 75%,
     transparent
   );
   z-index: 1;
@@ -176,5 +202,12 @@ canvas {
   }
   100% {
     background-position: 50px 50px;
+  }
+}
+
+/*MOBILE STYLES*/
+@media only screen and (max-width : 768px) {
+  .brand-logo{
+    left: 15px;
   }
 }
