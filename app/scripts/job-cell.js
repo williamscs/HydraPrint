@@ -2,14 +2,18 @@ var JobCell = React.createClass({displayName: "JobCell",
 		render: function() {
 			this.props.progress = parseInt(this.props.progress, 10);
 			return (
-				React.createElement("div", {className: "col-sm-3"}, 
-					React.createElement("div", {className: "title"}, this.props.title), 
-					React.createElement("a", {href: "#"}, this.props.printer), 
-					React.createElement("span", {className: "subtext"}, "76hrs 0min 37sec"), 
-					React.createElement("div", {className: "progress animate"}, 
-						React.createElement("span", {className: "percentComplete"}, this.props.progress, "%"), 
-						React.createElement("span", {className: "progressBar", style: {width: this.props.progress + '%'}}, 
-							React.createElement("span", null)
+				React.createElement("a", {href: "#"}, 
+					React.createElement("div", {className: "col-sm-3 job-bg"}, 
+						React.createElement("div", {className: "job-border"}, 
+							React.createElement("div", {className: "title"}, this.props.title), 
+								this.props.printer, 
+							React.createElement("span", {className: "subtext"}, "76hrs 0min 37sec"), 
+							React.createElement("div", {className: "progress animate"}, 
+								React.createElement("span", {className: "percentComplete"}, this.props.progress, "%"), 
+								React.createElement("span", {className: "progressBar", style: {width: this.props.progress + '%'}}, 
+									React.createElement("span", null)
+								)
+							)
 						)
 					)
 				)

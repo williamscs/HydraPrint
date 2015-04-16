@@ -76,6 +76,15 @@ div.inline {
   height:8px;
 }
 
+#jobs {
+  text-align:center;
+}
+
+.job-bg{
+  background: whitesmoke;
+  border: 10px solid white;
+}
+
 .new-job {
   height: 100%;
   display: inline-block;

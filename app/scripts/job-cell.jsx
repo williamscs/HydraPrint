@@ -2,17 +2,21 @@ var JobCell = React.createClass({
 		render: function() {
 			this.props.progress = parseInt(this.props.progress, 10);
 			return (
-				<div className="col-sm-3">
-					<div className="title">{this.props.title}</div>
-					<a href="#">{this.props.printer}</a>
-					<span className="subtext">76hrs 0min 37sec</span>
-					<div className="progress animate">
-						<span className="percentComplete">{this.props.progress}%</span>
-						<span className="progressBar" style={{width: this.props.progress + '%'}}>
-							<span></span>
-						</span>
+				<a href="#">
+					<div className="col-sm-3 job-bg">
+						<div className="job-border">
+							<div className="title">{this.props.title}</div>
+								{this.props.printer}
+							<span className="subtext">76hrs 0min 37sec</span>
+							<div className="progress animate">
+								<span className="percentComplete">{this.props.progress}%</span>
+								<span className="progressBar" style={{width: this.props.progress + '%'}}>
+									<span></span>
+								</span>
+							</div>
+						</div>
 					</div>
-				</div>
+				</a>
 		);
 	}
 });
