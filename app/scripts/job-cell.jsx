@@ -36,7 +36,6 @@ var JobContainer = React.createClass({
 					<img src="/plus.png" alt="MDN" />
 				</div>
 				{nodes}
-				<div className="contentEndText"><a href="#">View previous jobs</a></div>
 			</div>
 		);
 	}

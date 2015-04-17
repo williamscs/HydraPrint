@@ -35,8 +35,7 @@ var JobContainer = React.createClass({displayName: "JobContainer",
 					React.createElement("span", {className: "new-job"}), 
 					React.createElement("img", {src: "/plus.png", alt: "MDN"})
 				), 
-				nodes, 
-				React.createElement("div", {className: "contentEndText"}, React.createElement("a", {href: "#"}, "View previous jobs"))
+				nodes
 			)
 		);
 	}
