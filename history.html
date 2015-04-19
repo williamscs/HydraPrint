@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- META TAGS-->
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<title>HydraPrint</title>
+		<link rel="shortcut icon" href="/images/favicon.ico">
+
+		<!-- STYLE SHEETS-->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!-- FONTS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<script src="//use.typekit.net/vym6ixu.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- NAVIGATION -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="fa fa-bars"></i>
+					</button>
+					<a href="/">
+						<img class="brand-logo" src="images/hydraprint.svg">
+						<p class="brand-title">HYDRAPRINT</p>
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">Dashboard</a></li>
+						<li><a href="/printers.html">Printers</a></li>
+						<li><a href="/history.html">Job history</a></li>
+						<li>
+							<button type="button" class="btn btn-primary btn-lg add-job" data-toggle="modal" data-target="#myModal">
+								<i class="fa fa-plus"></i> job
+							</button>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<!-- /NAVIGATION -->
+
+		<!-- JOBS-->
+		<div id="jobs" class="container">
+			<div class="row">
+				<a href="#">
+					<div class="col-sm-3">
+						<div class="job">
+							<div class="job-text">
+								<h3>Job name</h3>
+								<h6>1hr 2min 30sec</h6>
+								<p>printer name</p>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="col-sm-3">
+						<div class="job">
+							<div class="job-text">
+								<h3>Job name</h3>
+								<h6>1hr 2min 30sec</h6>
+								<p>printer name</p>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="col-sm-3">
+						<div class="job">
+							<div class="job-text">
+								<h3>Job name</h3>
+								<h6>45min 30sec</h6>
+								<p>printer name</p>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="col-sm-3">
+						<div class="job">
+							<div class="job-text">
+								<h3>Job name</h3>
+								<h6>3hr 2min 30sec</h6>
+								<p>printer name</p>
+							</div>
+						</div>
+					</div>
+				</a>
+	    </div><!-- /row -->
+		</div><!-- /container-->
+		<!-- /JOBS-->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+	<footer>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</footer>
+</html>
