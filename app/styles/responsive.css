@@ -1,0 +1,33 @@
+@media (max-width : 585px){
+	#main-content{
+		max-width: 305px;
+		width: 100%
+	}
+	.job-cell {
+		width: 90%;
+	}
+}
+@media (max-width: 915px) and (min-width: 586px){
+	#main-content{
+		max-width: 615px;
+	}
+	.job-cell {
+		width: 42%;
+	}
+}
+@media (max-width: 1200px) and (min-width: 916px){
+	#main-content{
+		max-width: 1200px;
+	}
+	.job-cell {
+		width: 28%;
+	}
+}
+@media (min-width: 1201px){
+	#main-content{
+		max-width: 1290px;
+	}
+	.job-cell {
+		width: 21%;
+	}
+}
