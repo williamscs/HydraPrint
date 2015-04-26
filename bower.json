@@ -3,7 +3,6 @@
   "private": true,
   "dependencies": {
     "jquery": "~1.11.1",
-    "modernizr": "~2.8.2",
-    "react": "~0.13.1"
+    "modernizr": "~2.8.2"
   }
 }

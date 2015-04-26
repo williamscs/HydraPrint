@@ -20,7 +20,6 @@
   "jquery": true,
   "globals": {
     "angular": false,
-    "Chart"  : false,
-    "React" : false
+    "Chart"  : false
   }
 }

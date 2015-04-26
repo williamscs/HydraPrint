@@ -1,3 +1,5 @@
+var React = require('react');
+
 var JobCell = React.createClass({
 		render: function() {
 			this.props.progress = parseInt(this.props.progress, 10);

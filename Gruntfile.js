@@ -62,9 +62,13 @@ module.exports = function (grunt) {
           '<%= config.app %>/images/{,*/}*'
         ]
       },
-      react: {
+      // react: {
+      //   files: '<%= config.app %>/scripts/**/*.jsx',
+      //   tasks: ['react']
+      // },
+      browserify: {
         files: '<%= config.app %>/scripts/**/*.jsx',
-        tasks: ['react']
+        tasks: ['browserify']
       }
     },
 
@@ -340,19 +344,42 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-    react: {
-      jsx: {
-        files: [
-          {
-            expand: true,
-            cwd: 'app/scripts',
-            src: [ '**/*.jsx' ],
-            dest: 'app/scripts',
-            ext: '.js'
+    // react: {
+    //   jsx: {
+    //     files: [
+    //       {
+    //         expand: true,
+    //         cwd: 'app/scripts',
+    //         src: [ '**/*.jsx' ],
+    //         dest: 'app/scripts',
+    //         ext: '.js'
+    //       }
+    //     ]
+    //   }
+    // },
+    browserify: {
+      client: {
+        options: {
+          transform: [ require('grunt-react').browserify ],
+          browserifyOptions: {
+            debug: true
           }
-        ]
+        },
+
+        files: {
+          '<%= config.app %>/app.built.js': ['<%= config.app %>/scripts/*.js', '<%= config.app %>/scripts/*.jsx'],
+        }
+      },
+      dist: {
+        options: {
+          transform: [ require('grunt-react').browserify ]
+        },
+
+        files: {
+          '<%= config.dist %>/app.built.js': ['<%= config.app %>/scripts/*.js', '<%= config.app %>/scripts/*.jsx'],
+        }
       }
-    },
+    }
   });
 
 
@@ -400,6 +427,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+    'browserify:dist',
     'concat',
     'cssmin',
     'uglify',
@@ -416,4 +444,6 @@ module.exports = function (grunt) {
     'build'
   ]);
   grunt.loadNpmTasks('grunt-react');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browserify');
 };
