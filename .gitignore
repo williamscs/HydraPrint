@@ -3,4 +3,5 @@ dist
 .tmp
 .grunt
 bower_components
+app.built.js
 *.sublime*

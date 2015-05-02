@@ -52,5 +52,12 @@ $( document ).ready(function() {
      navigation.toggleClass('menu');
      return false;
   });
+
+  $('body').click(function(e) {
+    if ($(e.target).closest('#navigation').length === 0) {
+    		hamburger.removeClass('active');
+        navigation.removeClass('menu');
+    }
+});
 });
 

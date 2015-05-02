@@ -1,20 +1,54 @@
-@media (max-width : 515px){
-	#navigation {
-		display: none;
+@-webkit-keyframes slidein {
+	from {
+		right: -15rem;
+		top: 2.25rem;
 	}
-	#navigation.menu {
+	to {
+		right: -1rem;
+		top: 2.25rem;
+	}
+}
+
+@-moz-keyframes slidein {
+	from {
+		right: -15rem;
+		top: 2.25rem;
+	}
+	to {
+		right: -1rem;
+		top: 2.25rem;
+	}
+}
+
+@keyframes slidein {
+	from {
+		right: -15rem;
+		top: 2.25rem;
+	}
+	to {
+		right: -1rem;
+		top: 2.25rem;
+	}
+}
+
+@media (max-width : 515px){
+		#navigation.menu {
 		display: block;
 		text-align: right;
 		background-color: rgba(0, 0, 0, 0.5);
 		position: absolute;
 		list-style-type: none;
-		height: 15rem;
+		height: 100vh;
 		padding-top: 1rem;
 		padding-right: 1rem;
 		font-size: 2rem;
 		width: 12rem;
-		top: 2.25rem;
+		-webkit-animation: slidein 0.5s 1;
+		-o-animation: slidein 0.5s 1;
+		animation: slidein 0.5s 1;
 		right: -1rem;
+		top: 2.25rem;
+		
 	}
 
 	#navigation.menu li {
@@ -24,6 +58,9 @@
 	#navigation.menu li  a{
 		position: relative;
 		text-align: center;
+	}
+	#navigation {
+		display: none;
 	}
 	/* http://codepen.io/stevenfabre/pen/LGvzk */
 	#hamburger-icon {
@@ -78,6 +115,13 @@
 	#navigation li {
 		display: inline;
 		margin-right: 0.75rem;
+	}
+
+	#navigation.menu {
+
+	}
+	#navigation.menu li{
+
 	}
 	#hamburger-icon {
 		display: none;
