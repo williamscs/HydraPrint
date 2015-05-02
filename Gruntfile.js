@@ -67,7 +67,7 @@ module.exports = function (grunt) {
       //   tasks: ['react']
       // },
       browserify: {
-        files: '<%= config.app %>/scripts/**/*.jsx',
+        files: '<%= config.app %>/scripts/**/*.js*',
         tasks: ['browserify']
       }
     },

@@ -17,6 +17,7 @@
 		<link rel="stylesheet" type="text/css" href="styles/reset.css">
 		<link rel="stylesheet" href="styles/main.css">
 		<link rel="stylesheet" href="styles/responsive.css">
+		<link rel="stylesheet" href="styles/navigation.css">
 		<!-- endbuild -->
 		<!-- build:js scripts/vendor/modernizr.js -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
@@ -28,8 +29,20 @@
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="header">
-			<div id="left-segment">
-				<h1>SPARK PRINT</h1>
+			<div class="left-segment verticalAlign">
+				HYDRA PRINT
+			</div>
+			<div class="right-segment verticalAlign">
+				<a id="hamburger-icon" href="#" title="Menu">
+				  <span class="line line-1"></span>
+				  <span class="line line-2"></span>
+				  <span class="line line-3"></span>
+				</a>
+				<ul id="navigation">
+					<li><a href="#" class="navLink">Dashboard</a></li>
+					<li><a href="#" class="navLink">Printers</a></li>
+					<li><a href="#" class="navLink">Job History</a></li>
+				</ul>
 			</div>
 		</div>
 		<div id="main-content">

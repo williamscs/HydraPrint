@@ -44,4 +44,13 @@
 // 	'materials': {}
 // };
 // jshint undef: false
+$( document ).ready(function() {
+  var hamburger = $('#hamburger-icon');
+  var navigation = $('#navigation');
+  hamburger.click(function() {
+     hamburger.toggleClass('active');
+     navigation.toggleClass('menu');
+     return false;
+  });
+});
 

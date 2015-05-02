@@ -27,8 +27,9 @@ div.inline {
 }
 
 .header {
-  font-size: 3em;
-  margin-bottom: 0.75em;
+  height: 2.25rem;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
   padding: 0.25em 0;
   color: white;
   background-color: rgb(43, 106, 145)
@@ -37,19 +38,19 @@ div.inline {
 .header > *{
   top: 0;
   left: 0;
-  margin-left: 1em;
+  margin: 0 1rem;
 }
 .header > p {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .job-cell {
   background-color: #fff;
   border: 1px solid #CCC;
-  margin: 1em;
+  margin: 1rem;
   min-width: 200px;
   max-width: 310px;
-  height: 11.5em;
+  height: 11.5rem;
   text-align: center;
   float: left
 }
@@ -72,6 +73,11 @@ div.inline {
   height:8px;
 }
 
+.navLink {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .new-job {
   height: 100%;
   display: inline-block;
@@ -82,14 +88,14 @@ div.inline {
   color: #E6E6E6;
   z-index: 100;
   margin-left: 5px;
-  margin-top: 0.25em;
+  margin-top: 0.25rem;
   position: absolute;
   background-color: none
 }
 
 .progress { 
   height: 30px;  /* Can be anything */
-  margin-top: 2em;
+  margin-top: 2rem;
   text-align: left;
   position: relative;
   background: #CCC;
@@ -144,21 +150,34 @@ box-shadow:
 }
 
 .subtext {
-  margin-top: 1em;
-  font-size: 0.8em;
+  margin-top: 1rem;
+  font-size: 0.8rem;
   display: block;
   font-style: italic;
 }
 
 .title {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.verticalAlign {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 #jobs {
   display: table
+}
+
+.left-segment {
+  float: left;
 }
 
 #legend {
@@ -173,6 +192,10 @@ box-shadow:
 #myChart {
   width: 100%;
   height: 400px
+}
+
+.right-segment {
+  float: right;
 }
 
 canvas {

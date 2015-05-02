@@ -1,0 +1,85 @@
+@media (max-width : 515px){
+	#navigation {
+		display: none;
+	}
+	#navigation.menu {
+		display: block;
+		text-align: right;
+		background-color: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		list-style-type: none;
+		height: 15rem;
+		padding-top: 1rem;
+		padding-right: 1rem;
+		font-size: 2rem;
+		width: 12rem;
+		top: 2.25rem;
+		right: -1rem;
+	}
+
+	#navigation.menu li {
+		margin-bottom: 2rem;
+	}
+
+	#navigation.menu li  a{
+		position: relative;
+		text-align: center;
+	}
+	/* http://codepen.io/stevenfabre/pen/LGvzk */
+	#hamburger-icon {
+		width: 40px;
+		height: 20px;
+		position: relative;
+		display: block;
+	}
+	#hamburger-icon .line {
+		display: block;
+		background: #ecf0f1;
+		width: 40px;
+		height: 4px;
+		position: absolute;
+		left: 0;
+		border-radius: 4px;
+		transition: all 0.4s;
+		-webkit-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+	}
+	#hamburger-icon .line.line-1 {
+		top: 0;
+	}
+	#hamburger-icon .line.line-2 {
+		top: 50%;
+	}
+	#hamburger-icon .line.line-3 {
+		top: 100%;
+	}
+	#hamburger-icon.active .line-1 {
+		transform: translateY(10px) translateX(0) rotate(45deg);
+		-webkit-transform: translateY(10px) translateX(0) rotate(45deg);
+		-moz-transform: translateY(10px) translateX(0) rotate(45deg);
+	}
+	#hamburger-icon.active .line-2 {
+		opacity: 0;
+	}
+	#hamburger-icon.active .line-3 {
+		transform: translateY(-10px) translateX(0) rotate(-45deg);
+		-webkit-transform: translateY(-10px) translateX(0) rotate(-45deg);
+		-moz-transform: translateY(-10px) translateX(0) rotate(-45deg);
+	}
+
+
+}
+@media (min-width: 516px){
+	#navigation {
+		list-style: none;
+		font-size: 1rem;
+	}
+
+	#navigation li {
+		display: inline;
+		margin-right: 0.75rem;
+	}
+	#hamburger-icon {
+		display: none;
+	}
+}
