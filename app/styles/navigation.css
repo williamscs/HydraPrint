@@ -1,33 +1,33 @@
 @-webkit-keyframes slidein {
 	from {
 		right: -15rem;
-		top: 2.25rem;
+		top: 2.8rem;
 	}
 	to {
-		right: -1rem;
-		top: 2.25rem;
+		right: 0rem;
+		top: 2.8rem;
 	}
 }
 
 @-moz-keyframes slidein {
 	from {
 		right: -15rem;
-		top: 2.25rem;
+		top: 2.8rem;
 	}
 	to {
-		right: -1rem;
-		top: 2.25rem;
+		right: 0rem;
+		top: 2.8rem;
 	}
 }
 
 @keyframes slidein {
 	from {
 		right: -15rem;
-		top: 2.25rem;
+		top: 2.8rem;
 	}
 	to {
-		right: -1rem;
-		top: 2.25rem;
+		right: 0rem;
+		top: 2.8rem;
 	}
 }
 
@@ -46,8 +46,8 @@
 		-webkit-animation: slidein 0.5s 1;
 		-o-animation: slidein 0.5s 1;
 		animation: slidein 0.5s 1;
-		right: -1rem;
-		top: 2.25rem;
+		right: 0rem;
+		top: 2.8rem;
 		
 	}
 
@@ -68,6 +68,7 @@
 		height: 20px;
 		position: relative;
 		display: block;
+		padding-right: 1rem;
 	}
 	#hamburger-icon .line {
 		display: block;

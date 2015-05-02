@@ -31,7 +31,7 @@ var JobContainer = React.createClass({
 			<div id="jobs">
 				<div className="job-cell">
 					<span className="new-job"></span>
-					<img src="/plus.png" alt="MDN" />
+					<img src="/images/plus.png" alt="MDN" />
 				</div>
 				{nodes}
 				<div className="contentEndText"><a href="#">View previous jobs</a></div>
