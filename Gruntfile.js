@@ -379,6 +379,12 @@ module.exports = function (grunt) {
           '<%= config.dist %>/app.built.js': ['<%= config.app %>/scripts/*.js', '<%= config.app %>/scripts/*.jsx'],
         }
       }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
@@ -446,4 +452,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-gh-pages');
 };
