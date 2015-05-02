@@ -26,24 +26,6 @@ div.inline {
   clear: both
 }
 
-.header {
-  height: 2.25rem;
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-  padding: 0.25em 0;
-  color: white;
-  background-color: rgb(43, 106, 145)
-}
-
-.header > *{
-  top: 0;
-  left: 0;
-  margin: 0 1rem;
-}
-.header > p {
-  font-size: 0.8rem;
-}
-
 .job-cell {
   background-color: #fff;
   border: 1px solid #CCC;
@@ -66,16 +48,15 @@ div.inline {
   vertical-align: middle
 }
 
+.left-segment {
+  float: left;
+}
+
 .legendColor {
   border-radius:8px;
   border:1px solid #ccc;
   width:8px;
   height:8px;
-}
-
-.navLink {
-  color: inherit;
-  text-decoration: inherit;
 }
 
 .new-job {
@@ -140,13 +121,18 @@ box-shadow:
     transparent 75%, 
     transparent
   );
-  z-index: 1;
+  z-index: 75;
   background-size: 50px 50px;
   overflow: hidden;
 }
 
 .animate > .progressBar:after {
-  animation: move 2s linear infinite;
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+}
+
+.right-segment {
+  float: right;
 }
 
 .subtext {
@@ -164,20 +150,12 @@ box-shadow:
 }
 
 .verticalAlign {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #jobs {
   display: table
-}
-
-.left-segment {
-  float: left;
 }
 
 #legend {
@@ -194,12 +172,17 @@ box-shadow:
   height: 400px
 }
 
-.right-segment {
-  float: right;
-}
-
 canvas {
    display: inline;
+}
+
+@-webkit-keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 @keyframes move {
