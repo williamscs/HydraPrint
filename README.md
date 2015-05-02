@@ -1,4 +1,4 @@
-#SparkPrint
+#HydraPrint
 ##REQUIREMENTS
  - [Utilize Spark API to communicate with printers](#utilize-spark-api-to-communicate-with-printers)
  - [Allow selection of active printers on a network](#allow-selection-of-active-printers-on-a-network)
