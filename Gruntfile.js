@@ -373,7 +373,7 @@ module.exports = function (grunt) {
         },
 
         files: {
-          '<%= config.app %>/app.built.js': ['<%= config.app %>/scripts/*.js', '<%= config.app %>/scripts/*.jsx'],
+          '<%= config.app %>/app.built.js': ['<%= config.app %>/scripts/*.js', '<%= config.app %>/scripts/templates/**/*.jsx'],
         }
       },
       dist: {
@@ -408,6 +408,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'browserify',
       'connect:livereload',
       'watch'
     ]);
