@@ -171,7 +171,7 @@ var JobContainer = React.createClass({displayName: "JobContainer",
 			React.createElement("div", {id: "jobs"}, 
 				React.createElement("div", {className: "job-cell"}, 
 					React.createElement("span", {className: "new-job"}), 
-					React.createElement("img", {src: "/plus.png", alt: "MDN"})
+					React.createElement("img", {src: "/images/plus.png", alt: "MDN"})
 				), 
 				nodes, 
 				React.createElement("div", {className: "contentEndText"}, React.createElement("a", {href: "#"}, "View previous jobs"))
@@ -246,6 +246,13 @@ $( document ).ready(function() {
      navigation.toggleClass('menu');
      return false;
   });
+
+  $('body').click(function(e) {
+    if ($(e.target).closest('#navigation').length === 0) {
+    		hamburger.removeClass('active');
+        navigation.removeClass('menu');
+    }
+});
 });
 
 
