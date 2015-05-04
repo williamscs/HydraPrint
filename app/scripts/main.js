@@ -81,6 +81,13 @@ $( document ).ready(function() {
 		
 	};
 
+	MainLibrary.prototype.getPrinter1 = function() {
+		return "./images/printer1.jpg";
+	};
+
+	MainLibrary.prototype.getPrinter2 = function() {
+		return "./images/printer2.jpg";
+	};
 
 	module.exports = MainLibrary;
 
