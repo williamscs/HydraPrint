@@ -59,7 +59,8 @@ module.exports = function (grunt) {
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+        '<%= config.app %>/scripts/**/**/*.js*'
         ]
       },
       // react: {
@@ -67,7 +68,7 @@ module.exports = function (grunt) {
       //   tasks: ['react']
       // },
       browserify: {
-        files: '<%= config.app %>/scripts/**/*.js*',
+        files: '<%= config.app %>/scripts/**/**/*.js*',
         tasks: ['browserify']
       }
     },
@@ -350,25 +351,13 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-    // react: {
-    //   jsx: {
-    //     files: [
-    //       {
-    //         expand: true,
-    //         cwd: 'app/scripts',
-    //         src: [ '**/*.jsx' ],
-    //         dest: 'app/scripts',
-    //         ext: '.js'
-    //       }
-    //     ]
-    //   }
-    // },
     browserify: {
       client: {
         options: {
           transform: [ require('grunt-react').browserify ],
           browserifyOptions: {
-            debug: true
+            debug: true,
+            standalone: 'MainLibrary'
           }
         },
 

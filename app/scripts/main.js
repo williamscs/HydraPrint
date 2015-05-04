@@ -12,7 +12,7 @@
 // 			data: [28, 48, 40, 19, 86, 27, 90, 400]
 // 		}
 // 	]
-// };
+// 
 
 // var sampleJson = {
 // 	'state': 'ready',
@@ -44,20 +44,59 @@
 // 	'materials': {}
 // };
 // jshint undef: false
-$( document ).ready(function() {
-  var hamburger = $('#hamburger-icon');
-  var navigation = $('#navigation');
-  hamburger.click(function() {
-     hamburger.toggleClass('active');
-     navigation.toggleClass('menu');
-     return false;
-  });
+var $ = require('jquery');
 
-  $('body').click(function(e) {
-    if ($(e.target).closest('#navigation').length === 0) {
-    		hamburger.removeClass('active');
-        navigation.removeClass('menu');
-    }
+$( document ).ready(function() {
+	var React = require('react');
+	var JobContainer = require('./templates/job/JobContainer.jsx');
+	var PrinterContainer = require('./templates/printer/PrinterContainer.jsx');
+	MainLibrary.prototype.generateJobCells = function() {
+			var data = [];
+
+			for (var i = 0; i < 6; i++) {
+				// var div = layoutManager.createJobCell('Job', 'Printer', 273637, Math.random() * 100);
+				data.push({title: "Job", printer: "Printer", progress: (Math.random()*100)})
+			}
+
+			React.render(
+					React.createElement(JobContainer, {jobs: data}),
+					document.getElementById('main-content')
+			);
+		
+	};
+
+	MainLibrary.prototype.generatePrinterCells = function() {
+			var data = [];
+			var printerInt;
+			for (var i = 0; i < 3; i++) {
+				printerInt = Math.floor(Math.random() * 2) + 1;
+				// var div = layoutManager.createJobCell('Job', 'Printer', 273637, Math.random() * 100);
+				data.push({title: "Job", name: "Printer Name", type: printerInt})
+			}
+
+			React.render(
+					React.createElement(PrinterContainer, {printers: data}),
+					document.getElementById('main-content')
+			);
+		
+	};
+
+
+	module.exports = MainLibrary;
+
+	var hamburger = $('#hamburger-icon');
+	var navigation = $('#navigation');
+	hamburger.click(function() {
+		 hamburger.toggleClass('active');
+		 navigation.toggleClass('menu');
+		 return false;
+	});
+
+	$('body').click(function(e) {
+		if ($(e.target).closest('#navigation').length === 0) {
+				hamburger.removeClass('active');
+				navigation.removeClass('menu');
+		}
 });
 });
 

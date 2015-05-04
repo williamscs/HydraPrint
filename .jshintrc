@@ -17,9 +17,8 @@
   "unused": false,
   "trailing": true,
   "smarttabs": true,
-  "jquery": true,
   "globals": {
     "angular": false,
-    "Chart"  : false
+    "Typekit"  : false
   }
 }

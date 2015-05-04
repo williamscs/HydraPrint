@@ -1,33 +1,32 @@
-@media (max-width : 585px){
+@media (max-width : 780px){
 	#main-content{
-		max-width: 305px;
-		width: 100%
+		width: 85%
 	}
-	.job-cell {
-		width: 90%;
+	.item-cell {
+		width: 100%;
 	}
 }
-@media (max-width: 915px) and (min-width: 586px){
+@media (max-width: 915px) and (min-width: 781px){
 	#main-content{
 		max-width: 615px;
 	}
-	.job-cell {
-		width: 42%;
+	.item-cell {
+		width: 50%;
 	}
 }
 @media (max-width: 1200px) and (min-width: 916px){
 	#main-content{
 		max-width: 1200px;
 	}
-	.job-cell {
-		width: 28%;
+	.item-cell {
+		width: 33%;
 	}
 }
 @media (min-width: 1201px){
 	#main-content{
 		max-width: 1290px;
 	}
-	.job-cell {
-		width: 21%;
+	.item-cell {
+		width: 25%;
 	}
 }

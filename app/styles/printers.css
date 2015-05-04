@@ -1,0 +1,11 @@
+.printer-image {
+  height: 65%;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.printer-name {
+  position: relative;
+  top: 0.5rem;
+  font-size: 1.3rem;
+}

@@ -2,7 +2,7 @@
 <html class="no-js">
 	<head>
 		<meta charset="utf-8">
-		<title>HydraPrint</title>
+		<title>HydraPrint Printers</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="shortcut icon" href="./favicon.ico">
@@ -18,14 +18,14 @@
 		<link rel="stylesheet" href="styles/main.css">
 		<link rel="stylesheet" href="styles/responsive.css">
 		<link rel="stylesheet" href="styles/navigation.css">
-		<link rel="stylesheet" href="styles/progress-bar.css">
+		<link rel="stylesheet" type="text/css" href="styles/printers.css">
 		<!-- endbuild -->
 		<!-- build:js scripts/vendor/modernizr.js -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
 		<!-- endbuild -->
 
 	</head>
-	<body onload="main.generateJobCells();">
+	<body onload="main.generatePrinterCells()">
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -53,7 +53,6 @@
 			</div>
 		</div>
 		<div id="main-content">
-			<div>Loading Gif...</div>
 			<div class="contentEndText">View previous jobs</div>
 		</div>
 
@@ -62,13 +61,7 @@
 		</div>
 
 		<!-- build:js(.) scripts/vendor.js -->
-		<!-- bower:js -->
-		<script src="bower_components/jquery/dist/jquery.js"></script>
-		<!-- endbower -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-		<!-- endbuild -->
-		<!-- build:js({app,.tmp}) scripts/main.js -->
-		<script src="./app.built.js"></script>
 		<!-- endbuild -->
 
 		<script>
@@ -79,6 +72,10 @@
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X');ga('send','pageview');
 		</script>
+
+		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="./app.built.js"></script>
+		<!-- endbuild -->
 
 		<script type="text/javascript">
 			var main = new MainLibrary();
